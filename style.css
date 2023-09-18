@@ -1,0 +1,136 @@
+.gradient-background {
+    background: linear-gradient(300deg, #000);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .icon-square {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+  }
+  
+  .profile-img {
+    border-radius: 50%;
+    height: 100px;
+  }
+  
+
+/* Add a class to style the sticky navigation header */
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Adjust the z-index as needed */
+  background-color: white; /* Background color for the sticky header */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add a box shadow for a subtle effect */
+}
+
+.section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+/* CSS for visible state of sections */
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.active, .nav ul li a:hover{
+  background:#0d6efd;
+  border-radius:3px;
+}
+/* Styling for the chatbot container */
+.chat-icon {
+  position: fixed;
+  bottom: 10px;
+  right: 30px;
+  font-size: 80px;
+  
+  
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.chat-box {
+  position: fixed;
+  bottom: 100px;
+  right: 40px;
+  width: 420px;
+  height:75vh;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-shadow: 0px 0px 128px 0 rgba(0, 0, 0, 0.1),
+  0 32px 64px -48px rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 998;
+  overflow: hidden;
+}
+
+.chat-header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 16px 0;
+  text-align: center;
+  font-weight: bold;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-size:1.4rem;
+}
+
+.chat-messages {
+  height:510px;
+  padding: 15px 20px 70px;;
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+#user-input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-top: 1px solid #ccc;
+  outline: none;
+}
+
+#send-message {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+/* Add styles for chat messages (user and bot messages) */
+.user-message {
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 5px 0;
+}
+
+.bot-message {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 5px 0;
+}
