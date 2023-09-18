@@ -22,7 +22,7 @@ btnScrollTo.addEventListener('click', function (e) {
     section1.scrollIntoView({ behavior: 'smooth' });
   });
 
-  console.log("javascript code is running.");
+  
   document.addEventListener('DOMContentLoaded', function () {
     const chatIcon = document.getElementById('chat-icon');
     const chatBox = document.getElementById('chat-box');
