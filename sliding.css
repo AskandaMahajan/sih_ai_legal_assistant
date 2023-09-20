@@ -2,10 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: "Raleway", sans-serif;
   }
   body {
-    background: #F0F0F0;
+    background: #E4F1FF;
   }
 
 .chat-messages {
@@ -21,7 +21,7 @@
     right: 0px;
     width: 475px;
     height: 50vh;
-    background-color:#F8F0E5;
+    background-color:white;
     border-top-right-radius: 10px;
     border-radius: 10px;
     box-shadow: 0px 0px 128px 0 rgba(0, 0, 0, 0.1),
@@ -44,6 +44,7 @@
     box-sizing: border-box; /* Ensure padding and borders are included in the width */
     box-shadow: 0px 0px 128px 0 rgba(0, 0, 0, 0.1),
       0 32px 64px -48px rgba(0, 0, 0, 0.5);
+      
   }
   
 
