@@ -1,0 +1,43 @@
+.text-box{
+    width:500px;
+    height:400px; 
+    margin:100px auto;
+    background:black;
+    position:relative;
+
+}
+.text-box h1{
+    margin:0;
+    padding:0;
+    font-family:Arial;
+    font-size:3em;
+    text-transform:uppercase;
+    text-align:center;
+    position:relative;
+    top:50%;
+    color:#555;
+    transform:translateY(-50%);
+}
+
+.chat-messages {
+    height:560px;
+    padding: 15px 20px 70px;;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.text-box {
+    position: relative;
+    bottom: 100px;
+    right: 40px;
+    width: 500px;
+    height:400vh;
+    background-color: rgb(185, 179, 179);
+    border-top-right-radius: 10px ;
+    border-radius: 10px;
+    box-shadow: 0px 0px 128px 0 rgba(0, 0, 0, 0.1),
+    0 32px 64px -48px rgba(0, 0, 0, 0.5);
+    margin:100px auto;
+    z-index: 998;
+    overflow: hidden;
+  }
