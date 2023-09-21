@@ -8,13 +8,6 @@
     background: #E4F1FF;
   }
 
-.chat-messages {
-    height:560px;
-    padding: 15px 20px 70px;;
-    max-height: 400px;
-    overflow-y: auto;
-}
-
 .chatbox {
     position: relative;
     bottom: 100px;
@@ -38,7 +31,12 @@
     color: #fff;
     background: #0d6efd;
     border-top-right-radius: 10px;
-    left:386px;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    margin:auto;
+    height:10vh;
     border-radius: 10px;
     width: 475px; /* Set the header width to 100% */
     box-sizing: border-box; /* Ensure padding and borders are included in the width */
