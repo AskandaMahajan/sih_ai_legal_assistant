@@ -31,6 +31,7 @@
       <li class="nav-item"><a href="#section--A" class="nav-link ">Templates</a></li>
       <li class="nav-item"><a href="#section--B" class="nav-link ">Recognise </a></li>
       <li class="nav-item"><a href="#section--C" class="nav-link ">Simplify</a></li>
+      <li class="nav-item"><a href="#section--C" class="nav-link ">Text-to-Speech</a></li>
     </ul>
   </nav>
 </header>
@@ -42,12 +43,12 @@
   <div class="col-lg-6 mx-auto">
     <p class="lead mb-4">Create, Understand, and Manage legal documents with Ease</p>
     <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-      <button type="button" class="btn btn-outline-dark btn-lg px-4 gap-3" fdprocessedid="y9ghot">Templates</button>
-      <button type="button" class="btn btn-outline-dark btn-lg px-4" fdprocessedid="wdgkv">Simplify</button>
+      <button type="button" class="btn btn-outline-dark btn-lg px-4 gap-3" fdprocessedid="y9ghot">Learn more &DownArrow;</button>
+
     </div>
   </div>
 </div>
-<button class=" btn--text btn--scroll-to">Learn more &DownArrow;</button>
+
 <!--HEADER SECTION END-->
 <!--WHAT DO WE DO SECTION-->
 <section class="section" id="section--1">
@@ -115,6 +116,23 @@
     </div>
   </section>
   <!--simplification section end-->
+  <section class="section" id="section--B">
+    <div class="container col-xxl-8 px-4 py-5">
+      <div class="row flex-lg-row align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img src="text_to _speech.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Text to Speech</h1>
+          <ol class="lead" style="list-style-type: disc;"> <!-- Use disc style for bullet points -->
+            <li>OCR-based document recognition , automatic language identification.</li>
+            <li>You can add more items here as needed.</li>
+          </ol>
+          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" fdprocessedid="7hyqil">Explore</button>
+        </div>
+      </div>
+    </div>
+  </section>
 </section>
 <!--WHAT DO WE DO SECTION END-->
 <!--FEATURES SECTION-->
@@ -261,10 +279,10 @@
       var header = document.querySelector("header");
   
       // Get the position of the "What do we Do?" section
-      var sectionDoWeDo = document.querySelector("#section--1");
-      var sectionDoWeDoPosition = sectionDoWeDo.getBoundingClientRect();
+      var sectionwhat_do_we_do = document.querySelector("#section--1");
+      var sectionwhat_do_we_doPosition = sectionwhat_do_we_do.getBoundingClientRect();
   
-      if (sectionDoWeDoPosition.top <= 0) {
+      if (sectionwhat_do_we_doPosition.top <= 0) {
         // Add the "sticky-header" class when we scroll past the section
         header.classList.add("sticky-header");
       } else {
