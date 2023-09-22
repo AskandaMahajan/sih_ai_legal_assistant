@@ -18,3 +18,7 @@ header.sticky-header {
     /* Add any other styles you want for the sticky header */
   }
   
+  .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: var(--bs-nav-pills-link-active-color);
+    background-color: #65451F;
+}
