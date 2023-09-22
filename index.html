@@ -19,28 +19,29 @@
 <body>
   
 <!--NAVIGATION BAR-->
-<header class=" d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+<header class=" d-flex flex-wrap justify-content-center py-3 mb-4">
   <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
    
-    <img src="logo.png" alt="logo" width="100" height="60" class="me-4" border-radius="1.90rem";>
+    <img src="logo1.png" alt="logo" width="100" height="60" class="me-4" border-radius="1.90rem";>
     <span class="fs-4">LegiSpeak</span>
   </a>
   <nav class="nav">
     <ul class="nav nav-pills">
-      <li class="nav-item"><a href="#section--1" class="nav-link active " aria-current="page">Home</a></li>
-      <li class="nav-item"><a href="#section--A" class="nav-link ">Templates</a></li>
-      <li class="nav-item"><a href="#section--B" class="nav-link ">Translate </a></li>
-      <li class="nav-item"><a href="#section--C" class="nav-link ">Simplify</a></li>
-      <li class="nav-item"><a href="#section--D" class="nav-link ">Text-to-Speech</a></li>
-      <li class="nav-item"><a href="#section--E" class="nav-link ">Database</a></li>
+      <li class="nav-item"><a href="#section--1" class="nav-link " data-target="section--1">Home</a></li>
+      <li class="nav-item"><a href="#section--A" class="nav-link " data-target="section--A">Templates</a></li>
+      <li class="nav-item"><a href="#section--B" class="nav-link " data-target="section--B">Translate </a></li>
+      <li class="nav-item"><a href="#section--C" class="nav-link " data-target="section--C">Simplify</a></li>
+      <li class="nav-item"><a href="#section--D" class="nav-link " data-target="section--D">Text-to-Speech</a></li>
+      <li class="nav-item"><a href="#section--E" class="nav-link " data-target="section--E">Database</a></li>
     </ul>
   </nav>
 </header>
+<hr size="2">
 <!--NAVIGATION BAR END-->
 
 <!---HEADER SECTION-->
 <div class=" px-4 py-5 my-5 text-center">
-  <img class="d-block mx-auto mb-4" src="logo.png" alt="" width="200" height="120">
+  <img class="d-block mx-auto mb-4" src="logo1.png" alt="" width="200" height="120">
   <h1 class=" title display-5 fw-bold">LegiSpeak: Redefining legal realms with AI</h1>
   <div class="col-lg-6 mx-auto">
     <p class="lead mb-4">Create, Understand, and Manage legal documents with Ease</p>
@@ -50,7 +51,6 @@
     </div>
   </div>
 </div>
-
 <!--HEADER SECTION END-->
 <!--WHAT DO WE DO SECTION-->
 <section class="section" id="section--1">
@@ -315,29 +315,55 @@
   </script>
 <!--STICKY NAV BAR JS CODE END-->
   
-  <script>
-    // Function to handle intersection observer
-    function handleIntersection(entries, observer) {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          // Unobserve the section to avoid redundant animations
-          observer.unobserve(entry.target);
-        }
-      });
-    }
+// Get all the navigation links
+<script>
+const navLinks = document.querySelectorAll('.nav-link');
 
-    // Set up the Intersection Observer
-    const sections = document.querySelectorAll(".section");
-    const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.2, // Adjust the threshold as needed
+// Add click event listeners to each navigation link
+navLinks.forEach((link) => {
+  link.addEventListener('click', (event) => {
+    // Prevent the default link behavior
+    event.preventDefault();
+
+    // Remove the "active" class from all links
+    navLinks.forEach((navLink) => {
+      navLink.classList.remove('active');
     });
 
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
-  </script>
+    // Add the "active" class to the clicked link
+    link.classList.add('active');
 
+    // Scroll to the target section
+    const targetId = link.getAttribute('data-target');
+    const targetSection = document.getElementById(targetId);
+    targetSection.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+</script>
+
+
+<script>
+  // Function to handle intersection observer
+  function handleIntersection(entries, observer) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        // Unobserve the section to avoid redundant animations
+        observer.unobserve(entry.target);
+      }
+    });
+  }
+
+  // Set up the Intersection Observer
+  const sections = document.querySelectorAll(".section");
+  const observer = new IntersectionObserver(handleIntersection, {
+    threshold: 0.2, // Adjust the threshold as needed
+  });
+
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
+</script>
   <!-- Add this script tag before the closing </body> tag -->
  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
  <script src="tindog.js"></script>
